@@ -1,5 +1,13 @@
-﻿/ 15. Variables and Constants
+﻿// 15. Variables and Constants
 
    >> completed lesson 15 where we talk about different type of variables and constants.
    >> some primitive data types are int, short, byte, long, float, double, decimal, char, bool.
    >> non-primitive data types are string, array, enum, class
+
+
+// 16. Overflowing
+
+   >> In this section we learn about the concept of overflowing.
+   >> Every data type has its range for storing the numbers.
+   >> If we store a number that not comes in its range then it will overflow.
+   >> We also learn how to control overflowing.
