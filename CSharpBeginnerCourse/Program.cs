@@ -6,10 +6,11 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            const float Pi = 3.14f;
-            Console.WriteLine(Pi);
-            Pi = 15.45;     //giving error
+            //Lesson 20. Demo Type Conversion
 
+            byte a = 1;
+            int b = a;
+            Console.WriteLine(b);
         }
     }
 }
