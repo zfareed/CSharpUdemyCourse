@@ -10,8 +10,8 @@ namespace CSharpBeginnerCourse
 
             try
             {
-                string number = "12345";
-                byte mynumber = Convert.ToByte(number);
+                string number = "hello";
+                bool mynumber = Convert.ToBoolean(number);
                 Console.WriteLine(mynumber);
 
             }
