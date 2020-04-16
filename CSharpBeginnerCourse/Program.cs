@@ -6,9 +6,17 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            byte number = 12;
+            int mynumber = 16;
+            float floatNumber = 23.5f;
+            char character = 'Z';
+            string name = "zain";
 
-            Console.WriteLine("My First C# Application");
+            Console.WriteLine(number);
+            Console.WriteLine(mynumber);
+            Console.WriteLine(floatNumber);
+            Console.WriteLine(character);
+            Console.WriteLine(name);
 
 
         }
