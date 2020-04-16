@@ -11,3 +11,9 @@
    >> Every data type has its range for storing the numbers.
    >> If we store a number that not comes in its range then it will overflow.
    >> We also learn how to control overflowing.
+
+
+// 17. Scope
+
+   >> evry variable and constant has its scope where it is accessable
+   >> It is not accessable form out of its scope
