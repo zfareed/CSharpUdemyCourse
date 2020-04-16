@@ -1,0 +1,5 @@
+﻿/ 15. Variables and Constants
+
+   >> completed lesson 15 where we talk about different type of variables and constants.
+   >> some primitive data types are int, short, byte, long, float, double, decimal, char, bool.
+   >> non-primitive data types are string, array, enum, class
