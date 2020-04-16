@@ -30,3 +30,8 @@
    >> Implicit Type Conversion
    >> Explicit Type Conversion(casting)
    >> Non-Compatible Type Conversion
+
+
+// 20. Demo Type Conversion
+
+   >> completed
