@@ -22,3 +22,11 @@
 // 18. Demo Variables and Constants
     
     >> completed
+
+
+// 19. Type Conversion
+
+   >> There are three type conversions
+   >> Implicit Type Conversion
+   >> Explicit Type Conversion(casting)
+   >> Non-Compatible Type Conversion
