@@ -6,21 +6,12 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            var number = 12;
-            var mynumber = 16;
-            var floatNumber = 23.5f;
-            var character = 'Z';
-            var name = "zain";
-            var isWorking = true;
-
-            Console.WriteLine(number);
-            Console.WriteLine(mynumber);
-            Console.WriteLine(floatNumber);
-            Console.WriteLine(character);
-            Console.WriteLine(name);
-            Console.WriteLine(isWorking);
-
-
+            Console.WriteLine("{0},{1}", byte.MinValue, byte.MaxValue);
+            Console.WriteLine("{0},{1}", int.MinValue, int.MaxValue);
+            Console.WriteLine("{0},{1}", long.MinValue, long.MaxValue);
+            Console.WriteLine("{0},{1}", char.MinValue, char.MaxValue);
+            Console.WriteLine("{0},{1}", float.MinValue, float.MaxValue);
+            Console.WriteLine("{0},{1}", double.MinValue, double.MaxValue);
         }
     }
 }
