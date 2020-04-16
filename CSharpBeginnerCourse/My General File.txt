@@ -17,3 +17,8 @@
 
    >> evry variable and constant has its scope where it is accessable
    >> It is not accessable form out of its scope
+
+
+// 18. Demo Variables and Constants
+    
+    >> completed
