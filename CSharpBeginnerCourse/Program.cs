@@ -8,8 +8,8 @@ namespace CSharpBeginnerCourse
         {
             //Lesson 20. Demo Type Conversion
 
-            byte a = 1;
-            int b = a;
+            int a = 1000;
+            byte b = (byte) a;
             Console.WriteLine(b);
         }
     }
