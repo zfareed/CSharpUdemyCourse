@@ -8,9 +8,20 @@ namespace CSharpBeginnerCourse
         {
             //Lesson 20. Demo Type Conversion
 
-            string number = "12345";
-            int mynumber = Convert.ToInt32(number);
-            Console.WriteLine(mynumber);
+            try
+            {
+                string number = "12345";
+                byte mynumber = Convert.ToByte(number);
+                Console.WriteLine(mynumber);
+
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Number cannot be converted");
+            }
+
+            
         }
     }
 }
