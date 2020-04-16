@@ -8,6 +8,8 @@ namespace CSharpBeginnerCourse
         {
             Console.WriteLine("Hello World!");
 
+            Console.WriteLine("My First C# Application");
+
 
         }
     }
