@@ -7,6 +7,8 @@ namespace CSharpBeginnerCourse
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+
         }
     }
 }
