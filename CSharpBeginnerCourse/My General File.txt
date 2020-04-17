@@ -50,3 +50,8 @@
 // 22. What are logical opreators?
     
     >> I have read the pdf file.
+
+
+// 23. Demo Opreators
+    
+    >> completed
