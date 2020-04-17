@@ -46,3 +46,7 @@
        > Logical Opreators
        > Bitwise Opreators
      
+
+// 22. What are logical opreators?
+    
+    >> I have read the pdf file.
