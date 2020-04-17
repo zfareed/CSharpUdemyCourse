@@ -35,3 +35,14 @@
 // 20. Demo Type Conversion
 
    >> completed
+
+
+// 21. Opreators
+
+    >> There are 5 type of opreators
+       > Arithematic Opreators
+       > Comparison Opreators
+       > Assignment Opreators
+       > Logical Opreators
+       > Bitwise Opreators
+     
