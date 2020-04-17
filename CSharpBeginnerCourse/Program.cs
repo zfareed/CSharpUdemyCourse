@@ -12,11 +12,11 @@ namespace CSharpBeginnerCourse
             var b = 5;
             var c = 2;
 
-            Console.WriteLine(a + b);
-            Console.WriteLine(a + b * c);
-
-            Console.WriteLine(5 / 2);
-            Console.WriteLine((float)5 / (float)2);
+            Console.WriteLine(a > b);
+            Console.WriteLine(a < b && b < c);
+            Console.WriteLine(a > b || b > c);
+            Console.WriteLine(!(a != b));
+            Console.WriteLine( a == c);
 
            
             
