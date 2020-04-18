@@ -2,17 +2,29 @@
 
 namespace CSharpBeginnerCourse
 {
+    public class Person
+    {
+        public string firstName;
+        public string lastName;
+
+        public void Introduction()
+        {
+            Console.WriteLine("My name is " + firstName + lastName );
+        }
+
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            //Lesson 23. Opreators
+            Person prsn1 = new Person();
+            prsn1.firstName = "zain";
+            prsn1.lastName = "fareed";
+            prsn1.Introduction();
 
 
-            byte num1 = 255;
-            num1 += 255;
-            
-            Console.WriteLine(num1);
+
 
 
         }
