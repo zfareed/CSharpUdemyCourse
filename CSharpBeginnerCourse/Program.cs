@@ -25,8 +25,9 @@ namespace CSharpBeginnerCourse
 
 
 
-
-
+            Calculator calc = new Calculator();
+            var result = calc.Add(3, 4);
+            Console.WriteLine("result = " + result);
         }
     }
 }
