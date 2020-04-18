@@ -2,32 +2,34 @@
 
 namespace CSharpBeginnerCourse
 {
-    public class Person
-    {
-        public string firstName;
-        public string lastName;
-
-        public void Introduction()
-        {
-            Console.WriteLine("My name is " + firstName + lastName );
-        }
-
-    }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Person prsn1 = new Person();
-            prsn1.firstName = "zain";
-            prsn1.lastName = "fareed";
-            prsn1.Introduction();
+            int[] numbers = new int[3];
+            numbers[0] = 10;
+
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
 
 
+            bool[] isTrue = new bool[3];
+            isTrue[0] = true;
 
-            Calculator calc = new Calculator();
-            var result = calc.Add(3, 4);
-            Console.WriteLine("result = " + result);
+            Console.WriteLine(isTrue[0]);
+            Console.WriteLine(isTrue[1]);
+            Console.WriteLine(isTrue[2]);
+
+
+            string[] names = new string[3] {"zain" , "fareed" , "ahmad" };
+            //names[0] = "zain";
+
+            Console.WriteLine(names[0]);
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names[2]);
+           
         }
     }
 }
