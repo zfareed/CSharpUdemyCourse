@@ -77,3 +77,13 @@
 //  27. Classes
 
      >> completed
+
+
+// 28. Demo Classes
+
+     >> completed
+
+
+// 29. Structs
+
+     >> completed
