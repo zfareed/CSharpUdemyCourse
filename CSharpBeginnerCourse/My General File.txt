@@ -102,3 +102,13 @@
 // 32. Strings
 
     >> completed
+
+
+// 33. Demo Strings
+
+    >> completed
+
+
+// 34. Enums
+
+    >> completed
