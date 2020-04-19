@@ -19,6 +19,14 @@ namespace CSharpBeginnerCourse
             var method = ShippingMethod.RegularAirMail;
             Console.WriteLine((int)method);
 
+            var methodID = 3;
+            Console.WriteLine((ShippingMethod)methodID);
+
+            Console.WriteLine(method.ToString());
+
+            var methodNAME = "Express";
+            var shippingMethod = Enum.Parse(typeof(ShippingMethod), methodNAME);
+
         }
     }
 }

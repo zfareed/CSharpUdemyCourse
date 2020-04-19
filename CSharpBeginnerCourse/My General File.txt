@@ -112,3 +112,8 @@
 // 34. Enums
 
     >> completed
+
+
+// 35. Demo Enum
+
+    >> completed
