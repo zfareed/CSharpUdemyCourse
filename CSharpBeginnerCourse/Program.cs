@@ -4,28 +4,21 @@ using System.ComponentModel.DataAnnotations;
 namespace CSharpBeginnerCourse
 {
 
-    public enum ShippingMethod
-    {
-        RegularAirMail = 1,
-        RegisterAirMail = 2,
-        Express = 3
-
-    }
-
+   
     class Program
     {
         static void Main(string[] args)
         {
-            var method = ShippingMethod.RegularAirMail;
-            Console.WriteLine((int)method);
+            var value1 = 10;
+            var value2 = value1;
+            value2++;
+            Console.WriteLine(string.Format("value1 : {0} , value2 : {1}", value1, value2));
 
-            var methodID = 3;
-            Console.WriteLine((ShippingMethod)methodID);
 
-            Console.WriteLine(method.ToString());
-
-            var methodNAME = "Express";
-            var shippingMethod = Enum.Parse(typeof(ShippingMethod), methodNAME);
+            int[] array1 = new int[3] { 1, 2, 3 };
+            int[] array2 = array1;
+            array2[0] = 5;
+            Console.WriteLine(string.Format("array1[0] : {0} , array2[1] : {1}", array1[0], array2[0]));
 
         }
     }
