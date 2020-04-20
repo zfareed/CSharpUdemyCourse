@@ -12,26 +12,26 @@ namespace CSharpBeginnerCourse
         {
             //Exercises
 
-            /* Q-2 - Write a program which takes two numbers from the console and displays the maximum
-                of the two.*/
+            /* Q-3 - Write a program and ask the user to enter the width and height of an image.
+                Then tell if the image is landscape or portrait.*/
 
-            Console.WriteLine("Enter Number_1 :");
-            int number1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Number_2 :");
-            int number2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the height of Image : ");
+            int height = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the width of Image : ");
+            int width = Convert.ToInt32(Console.ReadLine());
 
-            int greater_number;
-            if (number1 > number2)
+            if (height > width)
             {
-                greater_number = number1;
+                Console.WriteLine("Your Image is portrait");
+            }
+            else if (width > height)
+            {
+                Console.WriteLine("Your Image is Landscape");
             }
             else
             {
-                greater_number = number2;
+                Console.WriteLine("Your Image is Square");
             }
-
-            Console.WriteLine("Greater number is {0}", greater_number);
-
 
 
         }
