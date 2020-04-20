@@ -10,25 +10,27 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            int month = 4;
+            //Exercises
 
-            switch (month)
-                {
+            /* Q-1 - Write a program and ask the user to enter a number. The number should be between
+             1 to 10.If the user enters a valid number, display "Valid" on the console.Otherwise,
+             display "Invalid". (This logic is used a lot in applications where values entered into
+                 input boxes need to be validated.)*/
 
-                case 1:
-                    Console.WriteLine("Its Janaury");
-                    break;
-                case 2:
-                    Console.WriteLine("Its Febraury");
-                    break;
-                case 3:
-                    Console.WriteLine("Its March");
-                    break;
-                case 4:
-                    Console.WriteLine("Its April");
-                    break;
+            Console.WriteLine("Enter a number : ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if (number >= 1 && number <=10)
+            {
+                Console.WriteLine("Number is Valid");
             }
-          
+            else
+            {
+                Console.WriteLine("Invalid Number");
+            }
+
+
+
         }
  
     }
