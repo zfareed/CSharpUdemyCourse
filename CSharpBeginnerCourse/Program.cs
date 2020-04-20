@@ -4,37 +4,30 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace CSharpBeginnerCourse
 {
-    public class Person
-    {
-        public int Age;
-    }
 
    
     class Program
     {
         static void Main(string[] args)
         {
+           var number =  10;
+            if (number > 0 && number <=12)
+            {
+                Console.WriteLine("Its Morning");
+            }
+            else if(number > 12 && number <= 18)
+            {
+                Console.WriteLine("Its Afternoon");
+            }
+            else
+            {
+                Console.WriteLine("Its Night");
+            }
 
-            var number = 1;
-            Increament(number);
-            Console.WriteLine(number);
-
-            Person person = new Person() { Age = 10};
-            AgeOld(person);
-            Console.WriteLine(person.Age);
 
           
         }
-
-        public static void Increament(int number)
-        {
-            number += 10;
-        }
-
-        public static void AgeOld(Person person)
-        {
-            person.Age += 20;
-        }
+ 
     }
 }
 
