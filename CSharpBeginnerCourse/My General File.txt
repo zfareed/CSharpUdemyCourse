@@ -148,3 +148,8 @@
 
     >> If/else Statements
     >> Switch/Case Statements
+
+
+//42. Demo. If/Else and Switch/Case
+
+    >> completed
