@@ -10,19 +10,11 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-           var number =  10;
-            if (number > 0 && number <=12)
-            {
-                Console.WriteLine("Its Morning");
-            }
-            else if(number > 12 && number <= 18)
-            {
-                Console.WriteLine("Its Afternoon");
-            }
-            else
-            {
-                Console.WriteLine("Its Night");
-            }
+            var mynumber = 20;
+            bool indicator = mynumber > 20 ? true : false;
+            Console.WriteLine(indicator);
+
+
 
 
           
