@@ -10,31 +10,35 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            int number = 1;
-            while (number < 10)
-            {
-                Console.WriteLine("Hello World");
+            // random class
 
-                number++;
+            var random = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(random.Next(1, 20));
             }
 
 
-            int mynumber = 1;              // skiping number 7 (use of continue)
-            while (mynumber < 10)
+            var myrandom = new Random();
+            for (int i = 0; i < 10; i++)
             {
-                if (mynumber == 7)
-                {
-                    mynumber++;
-                    continue;
-                }
-                else
-                {
-                    Console.WriteLine(mynumber);
-                }
-                mynumber++;
-                
+                Console.Write((char)('a' + myrandom.Next(0, 26)));
             }
-           
+
+
+
+            var array = new char[10];
+            for (int i = 0; i < 10; i++)
+            {
+                array[i] = (char)('a' + myrandom.Next(0, 26));
+            }
+
+            var password = new string(array);
+
+            Console.WriteLine("\n" + password);
+
+
+
 
         }
 

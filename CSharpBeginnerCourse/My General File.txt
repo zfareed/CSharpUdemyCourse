@@ -177,3 +177,8 @@
 // 47. Demo. While Loops
 
     >> completed
+
+
+// 48. Random Class
+
+    >> completed
