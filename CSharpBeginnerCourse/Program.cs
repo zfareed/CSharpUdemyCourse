@@ -10,24 +10,29 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            var name = "Zain Fareed";
-
-            /*for (int i = 0; i < name.Length; i++)
+            int number = 1;
+            while (number < 10)
             {
-                Console.WriteLine(name[i]);
-            }*/
+                Console.WriteLine("Hello World");
 
-
-            foreach (var character in name)
-            {
-                Console.WriteLine(character);
+                number++;
             }
 
 
-            var array = new int[5] { 2, 5, 7, 9, 11 };
-            foreach (var item in array)
+            int mynumber = 1;              // skiping number 7 (use of continue)
+            while (mynumber < 10)
             {
-                Console.WriteLine(item);
+                if (mynumber == 7)
+                {
+                    mynumber++;
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine(mynumber);
+                }
+                mynumber++;
+                
             }
            
 

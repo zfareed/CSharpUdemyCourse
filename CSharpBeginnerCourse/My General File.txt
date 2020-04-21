@@ -172,3 +172,8 @@
 // 46. Demo. Foreach Loop
 
     >> completed
+
+
+// 47. Demo. While Loops
+
+    >> completed
