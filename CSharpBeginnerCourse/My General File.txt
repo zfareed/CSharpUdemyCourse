@@ -167,3 +167,8 @@
 // 45. Demo. For Loops
 
     >> completed
+
+
+// 46. Demo. Foreach Loop
+
+    >> completed
