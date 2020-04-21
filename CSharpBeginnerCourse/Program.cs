@@ -16,17 +16,46 @@ namespace CSharpBeginnerCourse
                  divisible by 3 with no remainder.Display the count on the console.
  */
 
-            
-            int count = 0;
 
-            for (int i = 1; i < 100; i++)
+            /* int count = 0;
+
+             for (int i = 1; i < 100; i++)
+             {
+                 if (i%3 == 0)
+                 {
+                     count++;
+                 }
+             }
+             Console.WriteLine(count + " numbers are divisable by 3");
+ */
+
+
+            /* Q-2 - Write a program and continuously ask the user to enter a number or
+                 "ok" to exit. Calculate the sum of all the previously entered 
+                 and display it on the console.*/
+
+            int add = 0;
+            int int_number;
+            string number;
+            
+            while (true)
             {
-                if (i%3 == 0)
+                Console.WriteLine("Enter a number or write 'ok' to exit");
+                number = Console.ReadLine();
+
+                if (number == "ok")
                 {
-                    count++;
+                    Console.WriteLine(add);
+                    break;
+                }
+                else
+                {
+                    int_number = Convert.ToInt32(number);
+                    add = add + int_number;
+
                 }
             }
-            Console.WriteLine(count + " numbers are divisable by 3");
+
 
 
         }
