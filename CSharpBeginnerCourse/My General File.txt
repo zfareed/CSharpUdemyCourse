@@ -162,3 +162,8 @@
 // 44. Iteration Statements
 
     >> completed
+
+
+// 45. Demo. For Loops
+
+    >> completed
