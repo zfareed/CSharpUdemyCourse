@@ -10,34 +10,23 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            // random class
+            // 49. Exercises
 
-            var random = new Random();
-            for (int i = 0; i < 10; i++)
+            /* Q-1 - Write a program to count how many numbers between 1 and 100 are
+                 divisible by 3 with no remainder.Display the count on the console.
+ */
+
+            
+            int count = 0;
+
+            for (int i = 1; i < 100; i++)
             {
-                Console.WriteLine(random.Next(1, 20));
+                if (i%3 == 0)
+                {
+                    count++;
+                }
             }
-
-
-            var myrandom = new Random();
-            for (int i = 0; i < 10; i++)
-            {
-                Console.Write((char)('a' + myrandom.Next(0, 26)));
-            }
-
-
-
-            var array = new char[10];
-            for (int i = 0; i < 10; i++)
-            {
-                array[i] = (char)('a' + myrandom.Next(0, 26));
-            }
-
-            var password = new string(array);
-
-            Console.WriteLine("\n" + password);
-
-
+            Console.WriteLine(count + " numbers are divisable by 3");
 
 
         }
