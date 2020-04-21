@@ -153,3 +153,7 @@
 //42. Demo. If/Else and Switch/Case
 
     >> completed
+
+// 43. Exericses
+
+    >> completed
