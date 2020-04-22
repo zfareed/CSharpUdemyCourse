@@ -27,43 +27,28 @@ namespace CSharpBeginnerCourse
                  display a message based on the above pattern.*/
 
 
-           
 
-            var nameList = new List<string>();
 
-            while (true)
+
+            /* Q-2 - Write a program and ask the user to enter their name. Use an array to reverse the
+                 name and then store the result in a new string.Display the reversed name on the console.*/
+
+
+            Console.Write("Enter the name : ");
+            var name = Console.ReadLine();
+
+            char[] array = new char[10];
+            int i = 0;
+            foreach (char character in name)
             {
-                Console.Write("Enter the name : ");
-                var name = Console.ReadLine();
-                if (name == "exit")
-                {
-                    break;
-                }
-                else
-                {
-                    nameList.Add(name);
-                }
+                array[i] = character;
+                i++;
             }
 
-            int counter = nameList.Count();
-            if (counter == 0)
-            {
-                Console.WriteLine(" ");
-            }
-            else if (counter == 1)
-            {
-                Console.WriteLine(nameList[0] + " likes your post");
-            }
-            else if (counter == 2)
-            {
-                Console.WriteLine(nameList[0] + " and " + nameList[1] + " likes your post");
-            }
-            else
-            {
-                Console.WriteLine(nameList[0] + " , " + nameList[1] + " and " + (counter-2) + " others likes your post" );
+            Array.Reverse(array);
 
-            }
-
+            string newName = new string(array);
+            Console.WriteLine("Reverse Name : " + newName);
 
         }
 
