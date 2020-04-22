@@ -34,28 +34,24 @@ namespace CSharpBeginnerCourse
                  "ok" to exit. Calculate the sum of all the previously entered 
                  and display it on the console.*/
 
-            int add = 0;
-            int int_number;
-            string number;
-            
-            while (true)
+
+
+
+            /*Q-3 - Write a program and ask the user to enter a number. Compute the factorial of the
+                number and print it on the console. For example, if the user enters 5, the program
+                should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.*/
+
+            int number;
+            Console.Write("Enter the number : ");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            int factorialSum = 1;
+            for (int i = 1; i <= number  ; i++)
             {
-                Console.WriteLine("Enter a number or write 'ok' to exit");
-                number = Console.ReadLine();
-
-                if (number == "ok")
-                {
-                    Console.WriteLine(add);
-                    break;
-                }
-                else
-                {
-                    int_number = Convert.ToInt32(number);
-                    add = add + int_number;
-
-                }
+                factorialSum = factorialSum * i; 
             }
 
+            Console.WriteLine(number + "! = " + factorialSum);
 
 
         }
