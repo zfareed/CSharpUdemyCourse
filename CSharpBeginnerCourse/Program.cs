@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -11,52 +12,43 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            // Demo. Array
+            // Demo. Lists
 
-            int[] array = new int[] { 3, 5, 7, 9, 6, 8 };
+            var numbers = new List<int>(){ 2 , 3 , 5, 6, 8, 9, 7 };
+            
+            //Add
+            numbers.Add(10);
+            numbers.AddRange(new int[3] { 12, 13, 14 });
 
-            //Lenght
-            Console.WriteLine("Lenght of array :" + array.Length);
+            foreach (var number in numbers)
+            {
+                Console.WriteLine(number);
+            }
 
             //Indexof
-            int index = Array.IndexOf(array, 6);
-            Console.WriteLine("Index of 6 : " + index);
 
+            var index = numbers.IndexOf(8);
+            Console.WriteLine("Index of 8 :" + index);
 
-            //Clear
-            Array.Clear(array, 1, 3);
+            //remove
 
-            foreach (int item in array)
+            numbers.Remove(3);
+
+            Console.WriteLine("List afte remove 3");
+            foreach (var number in numbers)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(number);
             }
 
-            //Copy
 
-            int[] array2 = new int[3];
-            Array.Copy(array, array2, 3);
+            //count
 
-            Console.WriteLine("Array 2");
-            foreach (var item in array2)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine("Count : " + numbers.Count);
 
-            //Sort
-            Array.Sort(array);
-            Console.WriteLine("Sorting array 1");
-            foreach (var item in array)
-            {
-                Console.WriteLine(item);
-            }
+            //clear
 
-            //reverse
-            Array.Reverse(array);
-            Console.WriteLine("Rversing array 1");
-            foreach (var item in array)
-            {
-                Console.WriteLine(item);
-            }
+            numbers.Clear();
+            Console.WriteLine("Count : " + numbers.Count);
 
 
 
