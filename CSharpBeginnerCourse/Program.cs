@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
 namespace CSharpBeginnerCourse
@@ -61,7 +62,7 @@ namespace CSharpBeginnerCourse
 
 
 
-            Console.Write("Guess the number : ");
+            /*Console.Write("Guess the number : ");
             int number = Convert.ToInt32(Console.ReadLine());
 
             var ranNumber = new Random();
@@ -78,8 +79,39 @@ namespace CSharpBeginnerCourse
                 Console.WriteLine("You Lose");
             }
 
+*/
 
 
+
+            /* Q-5 - Write a program and ask the user to enter a series of numbers separated by
+                 comma.Find the maximum of the numbers and display it on the console.
+                 For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.*/
+
+
+
+            Console.Write("Enter a series of number seprated by comma : ");
+            var numbers = Console.ReadLine();
+
+            int[] array = new int[10];
+            int int_number;
+            int j = 0;
+
+            foreach (char number in numbers)
+            {
+                if (Char.IsDigit(number))
+                {
+                    int_number = Convert.ToInt32(number);
+                    array[j] = int_number - 48;           // assci value of numbers start from 48. so we minus 48 for original numeric value.
+                    j++;
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(array[i]);
+                
+            }
+            Console.WriteLine("Max Value :" + array.Max());
 
 
 
