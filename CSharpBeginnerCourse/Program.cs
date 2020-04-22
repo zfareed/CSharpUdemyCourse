@@ -12,44 +12,57 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            // Demo. Lists
+            // 56. Exercises
 
-            var numbers = new List<int>(){ 2 , 3 , 5, 6, 8, 9, 7 };
-            
-            //Add
-            numbers.Add(10);
-            numbers.AddRange(new int[3] { 12, 13, 14 });
+            /*Q-1 - When you post a message on Facebook, depending on the number of people who like your post,
+             Facebook displays different information.
 
-            foreach (var number in numbers)
+                 If no one likes your post, it doesn't display anything.
+                 If only one person likes your post, it displays: [Friend's Name] likes your post.
+                 If two people like your post, it displays: [Friend 1] and[Friend 2] like your post.
+                 If more than two people like your post, it displays: [Friend 1], [Friend 2] and[Number
+                     of Other People] others like your post.
+                 Write a program and continuously ask the user to enter different names, until the user
+                     presses Enter (without supplying a name). Depending on the number of names provided,
+                 display a message based on the above pattern.*/
+
+
+           
+
+            var nameList = new List<string>();
+
+            while (true)
             {
-                Console.WriteLine(number);
+                Console.Write("Enter the name : ");
+                var name = Console.ReadLine();
+                if (name == "exit")
+                {
+                    break;
+                }
+                else
+                {
+                    nameList.Add(name);
+                }
             }
 
-            //Indexof
-
-            var index = numbers.IndexOf(8);
-            Console.WriteLine("Index of 8 :" + index);
-
-            //remove
-
-            numbers.Remove(3);
-
-            Console.WriteLine("List afte remove 3");
-            foreach (var number in numbers)
+            int counter = nameList.Count();
+            if (counter == 0)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(" ");
             }
+            else if (counter == 1)
+            {
+                Console.WriteLine(nameList[0] + " likes your post");
+            }
+            else if (counter == 2)
+            {
+                Console.WriteLine(nameList[0] + " and " + nameList[1] + " likes your post");
+            }
+            else
+            {
+                Console.WriteLine(nameList[0] + " , " + nameList[1] + " and " + (counter-2) + " others likes your post" );
 
-
-            //count
-
-            Console.WriteLine("Count : " + numbers.Count);
-
-            //clear
-
-            numbers.Clear();
-            Console.WriteLine("Count : " + numbers.Count);
-
+            }
 
 
         }
