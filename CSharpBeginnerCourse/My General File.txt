@@ -199,3 +199,13 @@
 // 51. Introduction
 
     >> completed
+
+
+// 52. Arrays
+
+    >> Single Dimensional Arrays
+    >> Multi Dimensional Arrays
+       > Rectangular Array
+       > Jagged Array (array of arrays)
+
+     
