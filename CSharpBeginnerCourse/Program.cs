@@ -15,20 +15,18 @@ namespace CSharpBeginnerCourse
         {
             // Date and Time
 
-            DateTime datetime = new DateTime();
+            TimeSpan timeSpan = new TimeSpan(1,2,3);
 
-            var now = DateTime.Now;
-            var today = DateTime.Today;
-            Console.WriteLine(now);
-            Console.WriteLine(today);
+            Console.WriteLine(timeSpan);
+
+            var start = DateTime.Now;
+            var end = DateTime.Now.AddMinutes(2);
+            var timeSpan2 = end - start;
+
+            Console.WriteLine(timeSpan2);
 
 
-
-            Console.WriteLine(now.ToLongDateString());
-            Console.WriteLine(now.ToShortDateString());
-            Console.WriteLine(now.ToLongTimeString());
-            Console.WriteLine(now.ToShortTimeString());
-            Console.WriteLine(now.ToString("yyyy-MM-dd"));
+            Console.WriteLine(timeSpan.ToString());
 
         }
 
