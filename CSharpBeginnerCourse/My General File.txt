@@ -208,4 +208,9 @@
        > Rectangular Array
        > Jagged Array (array of arrays)
 
+
+// 54. Lists
+
+    >> Similar as arrays but has dynamic size
+
      
