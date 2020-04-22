@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -57,44 +58,35 @@ namespace CSharpBeginnerCourse
                 enters 5 unique numbers, sort them and display the result on the console.*/
 
 
-            int[] array = new int[5] { 0,0,0,0,0};
-            int j = 0;
-            int counter = 0;
-            bool repeat = false;
+
+
+
+
+            /* Q-4 - Write a program and ask the user to continuously enter a number or type "Quit" to exit.
+                 The list of numbers may include duplicates.Display the unique numbers that the user has entered.*/
+
+
+            var mylist = new List<int>();
+
             while (true)
             {
-                Console.Write("Enter the number : ");
-                int number = Convert.ToInt32(Console.ReadLine());
+                Console.Write(" Enter the number :");
+                var number = Console.ReadLine();
 
-                foreach (var num in array)
+                if (number == "quit")
                 {
-                    if (number == num)
-                    {
-                        Console.WriteLine(num + " is previously entered, enter a unique number");
-                        repeat = true;
-                    }
+                    break;
+                }
+                else
+                {
+                    int intNumber = Convert.ToInt32(number);
+                    mylist.Add(intNumber);
 
                 }
-
-                if (repeat == false)
-                {
-
-
-                    array[j] = number;
-                    j++;
-                    counter++;
-                    if (counter == 5)
-                    {
-                        break;
-                    }
-
-                }
-                repeat = false;
             }
 
-           
-            Array.Sort(array);
-            foreach (var item in array)
+            IEnumerable list = mylist.Distinct();
+            foreach (var item in list)
             {
                 Console.WriteLine(item);
             }
