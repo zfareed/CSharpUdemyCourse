@@ -65,31 +65,38 @@ namespace CSharpBeginnerCourse
             /* Q-4 - Write a program and ask the user to continuously enter a number or type "Quit" to exit.
                  The list of numbers may include duplicates.Display the unique numbers that the user has entered.*/
 
+            /*
+                        var mylist = new List<int>();
 
-            var mylist = new List<int>();
+                        while (true)
+                        {
+                            Console.Write(" Enter the number :");
+                            var number = Console.ReadLine();
 
-            while (true)
-            {
-                Console.Write(" Enter the number :");
-                var number = Console.ReadLine();
+                            if (number == "quit")
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                int intNumber = Convert.ToInt32(number);
+                                mylist.Add(intNumber);
 
-                if (number == "quit")
-                {
-                    break;
-                }
-                else
-                {
-                    int intNumber = Convert.ToInt32(number);
-                    mylist.Add(intNumber);
+                            }
+                        }
 
-                }
-            }
+                        IEnumerable list = mylist.Distinct();
+                        foreach (var item in list)
+                        {
+                            Console.WriteLine(item);
+                        }*/
 
-            IEnumerable list = mylist.Distinct();
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
+
+            
+
+
+
+
 
         }
 

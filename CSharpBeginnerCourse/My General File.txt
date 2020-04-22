@@ -217,6 +217,11 @@
 // 55. Demo. Lists
     
     >> completed
+
+
+//56. Exercises
+
+   >> completed
         
 
      
