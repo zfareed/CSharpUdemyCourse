@@ -34,7 +34,7 @@ namespace CSharpBeginnerCourse
                  name and then store the result in a new string.Display the reversed name on the console.*/
 
 
-            Console.Write("Enter the name : ");
+            /*Console.Write("Enter the name : ");
             var name = Console.ReadLine();
 
             char[] array = new char[10];
@@ -48,7 +48,56 @@ namespace CSharpBeginnerCourse
             Array.Reverse(array);
 
             string newName = new string(array);
-            Console.WriteLine("Reverse Name : " + newName);
+            Console.WriteLine("Reverse Name : " + newName);*/
+
+
+
+            /*Q-3 - Write a program and ask the user to enter 5 numbers.If a number has been previously
+                entered, display an error message and ask the user to re-try. Once the user successfully
+                enters 5 unique numbers, sort them and display the result on the console.*/
+
+
+            int[] array = new int[5] { 0,0,0,0,0};
+            int j = 0;
+            int counter = 0;
+            bool repeat = false;
+            while (true)
+            {
+                Console.Write("Enter the number : ");
+                int number = Convert.ToInt32(Console.ReadLine());
+
+                foreach (var num in array)
+                {
+                    if (number == num)
+                    {
+                        Console.WriteLine(num + " is previously entered, enter a unique number");
+                        repeat = true;
+                    }
+
+                }
+
+                if (repeat == false)
+                {
+
+
+                    array[j] = number;
+                    j++;
+                    counter++;
+                    if (counter == 5)
+                    {
+                        break;
+                    }
+
+                }
+                repeat = false;
+            }
+
+           
+            Array.Sort(array);
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
 
         }
 
