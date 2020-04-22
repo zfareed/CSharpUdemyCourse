@@ -182,3 +182,8 @@
 // 48. Random Class
 
     >> completed
+
+
+// 49. Exercises
+
+    >> completed
