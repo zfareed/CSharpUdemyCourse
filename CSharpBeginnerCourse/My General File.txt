@@ -222,6 +222,11 @@
 //56. Exercises
 
    >> completed
+
+
+// 57. Summary
+
+   >> completed
         
 
      
