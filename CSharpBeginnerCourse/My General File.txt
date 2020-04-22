@@ -192,3 +192,8 @@
 // 50. Summary
 
     >> completed
+
+
+/////////////// SECTION 6 (Array and Lists)    /////////////////////
+
+
