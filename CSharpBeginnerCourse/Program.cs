@@ -13,20 +13,15 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            // Date and Time
+            // Strings
 
-            TimeSpan timeSpan = new TimeSpan(1,2,3);
+            var myname = "Zain Fareed ";
 
-            Console.WriteLine(timeSpan);
+            Console.WriteLine(myname.Trim());   // trim whitespace
 
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
-            var timeSpan2 = end - start;
+            Console.WriteLine(myname.ToLower());   // for lowecase
 
-            Console.WriteLine(timeSpan2);
-
-
-            Console.WriteLine(timeSpan.ToString());
+            Console.WriteLine(myname.ToUpper());    // for upercase
 
         }
 
