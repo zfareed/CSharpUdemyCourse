@@ -267,6 +267,16 @@
 // 64. Demo. Strings
 
     >> completed
+
+// 65. (Summarazing Text)
+
+    >> completed
+
+
+// 66. StringBuilder
+
+    >> As strings are immutable, to get rid of this a problem there is new 
+       string called StringBuilder
         
 
      
