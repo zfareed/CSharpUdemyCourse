@@ -23,6 +23,26 @@ namespace CSharpBeginnerCourse
 
             Console.WriteLine(myname.ToUpper());    // for upercase
 
+            Console.WriteLine(myname.IndexOf("i"));  // index of any character
+
+            Console.WriteLine(myname.LastIndexOf("Fareed"));  // check last index of string
+
+            var index = myname.IndexOf(" ");                  // for substring
+            var fName = myname.Substring(0,index);
+            var lNmae = myname.Substring(index+1);
+            Console.WriteLine("First Name : " + fName);
+            Console.WriteLine("Last Name : " + lNmae);
+
+            var split = myname.Split(" ");                     // split method (split the string into 2 halves and store in string array)
+            Console.WriteLine("F Name : " + split[0]);
+            Console.WriteLine("L Name : " + split[1]);
+
+            Console.WriteLine(myname.Replace("Zain", "Zafar"));     // replace method
+            Console.WriteLine(myname.Replace("a","A"));
+
+
+
+
         }
 
     }
