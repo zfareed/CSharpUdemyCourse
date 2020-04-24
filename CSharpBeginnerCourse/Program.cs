@@ -38,8 +38,23 @@ namespace CSharpBeginnerCourse
             Console.WriteLine("L Name : " + split[1]);
 
             Console.WriteLine(myname.Replace("Zain", "Zafar"));     // replace method
-            Console.WriteLine(myname.Replace("a","A"));
+            Console.WriteLine(myname.Replace("a", "A"));
 
+
+            if (String.IsNullOrWhiteSpace(" "));                    // isNUllorEmpty   //isNuLLorWhiteSpace
+            {
+                Console.WriteLine("Invalid");
+            }
+
+
+            var str = "25";                          // string to int
+            var age = Convert.ToInt32(str);
+            Console.WriteLine(age);
+
+            float price = 34.45f;                  // float to str
+            Console.WriteLine(price);
+            var myprice = price.ToString("C");
+            Console.WriteLine(myprice);
 
 
 
