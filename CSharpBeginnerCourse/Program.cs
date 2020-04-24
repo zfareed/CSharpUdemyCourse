@@ -13,48 +13,36 @@ namespace CSharpBeginnerCourse
     {
         static void Main(string[] args)
         {
-            // Strings
+            // Summarizing Text
 
-            var myname = "Zain Fareed ";
+            var text = "This is going to be a very very very very long long string";
+            var maxLenght = 20;
+            var wordCounter = 0;
+            var mylist = new List<string>();
 
-            Console.WriteLine(myname.Trim());   // trim whitespace
-
-            Console.WriteLine(myname.ToLower());   // for lowecase
-
-            Console.WriteLine(myname.ToUpper());    // for upercase
-
-            Console.WriteLine(myname.IndexOf("i"));  // index of any character
-
-            Console.WriteLine(myname.LastIndexOf("Fareed"));  // check last index of string
-
-            var index = myname.IndexOf(" ");                  // for substring
-            var fName = myname.Substring(0,index);
-            var lNmae = myname.Substring(index+1);
-            Console.WriteLine("First Name : " + fName);
-            Console.WriteLine("Last Name : " + lNmae);
-
-            var split = myname.Split(" ");                     // split method (split the string into 2 halves and store in string array)
-            Console.WriteLine("F Name : " + split[0]);
-            Console.WriteLine("L Name : " + split[1]);
-
-            Console.WriteLine(myname.Replace("Zain", "Zafar"));     // replace method
-            Console.WriteLine(myname.Replace("a", "A"));
-
-
-            if (String.IsNullOrWhiteSpace(" "));                    // isNUllorEmpty   //isNuLLorWhiteSpace
+            if (text.Length < maxLenght)
             {
-                Console.WriteLine("Invalid");
+                Console.WriteLine(text);
+            }
+            else
+            {
+                var splitText = text.Split(" ");
+
+                foreach (var word in splitText)
+                {
+                    wordCounter += word.Length + 1;    // +1 for space
+                    mylist.Add(word);
+                    if (wordCounter > maxLenght)
+                    {
+                        break;
+                    }
+
+                }
+
+                var summary = String.Join(" ",mylist) + "...";
+                Console.WriteLine(summary);
             }
 
-
-            var str = "25";                          // string to int
-            var age = Convert.ToInt32(str);
-            Console.WriteLine(age);
-
-            float price = 34.45f;                  // float to str
-            Console.WriteLine(price);
-            var myprice = price.ToString("C");
-            Console.WriteLine(myprice);
 
 
 
