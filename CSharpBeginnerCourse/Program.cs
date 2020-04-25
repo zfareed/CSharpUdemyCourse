@@ -17,44 +17,29 @@ namespace CSharpBeginnerCourse
 
             // Exercises
 
-            /*Q-2 - Write a program and ask the user to enter a few numbers separated by a hyphen.
-                If the user simply presses Enter, without supplying an input, exit immediately;
-            otherwise, check to see if there are duplicates. If so, display "Duplicate" on the console.*/
+            /* Q-3 - Write a program and ask the user to enter a time value in the 24 - hour time
+                 format(e.g. 19:00). A valid time should be between 00:00 and 23:59.If the time is
+                 valid, display "Ok"; otherwise, display "Invalid Time".If the user doesn't provide
+                 any values, consider it as invalid time.*/
+
+            Console.Write("Enetr 24 hour time format (e.g. 19:00) ");
+            var time = Console.ReadLine();
+
+            var mytime = time.Split(":");
+            var hour = Convert.ToInt32(mytime[0]);
+            var minute = Convert.ToInt32(mytime[1]);
 
 
-            Console.Write("Enter the numbers seprated by hypen : ");
-            var numbers = Console.ReadLine();
-            var list = new List<int>();
-
-            var splitNUmbers = numbers.Split("-");
-
-            foreach (var number in splitNUmbers)
+            if( hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
             {
-                int intNumber = Convert.ToInt32(number);
-                list.Add(intNumber);
+                Console.WriteLine("Valid Time");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Time");
             }
 
-            bool check = false;
-            for (int i = 0; i < list.Count-1; i++)
-            {
-                for (int j = i+1; j < list.Count; j++)
-                {
-                    if (list[i] == list[j])
-                    {
-                        check = true;
-                        break;
-                    }
-                }
-                if (check == true)
-                {
-                    break;
-                }
-            }
 
-            if (check == true)
-            {
-                Console.WriteLine("Duplicate");
-            }
 
 
 
