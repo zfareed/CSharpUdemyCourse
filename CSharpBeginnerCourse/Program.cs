@@ -17,9 +17,10 @@ namespace CSharpBeginnerCourse
 
             // Exercises
 
-            /* Q-1 - Write a program and ask the user to enter a few numbers separated by a hyphen.
-                 Work out if the numbers are consecutive.For example, if the input is "5-6-7-8-9" or
-                 "20-19-18-17-16", display a message: "Consecutive"; otherwise, display "Not Consecutive".*/
+            /*Q-2 - Write a program and ask the user to enter a few numbers separated by a hyphen.
+                If the user simply presses Enter, without supplying an input, exit immediately;
+            otherwise, check to see if there are duplicates. If so, display "Duplicate" on the console.*/
+
 
             Console.Write("Enter the numbers seprated by hypen : ");
             var numbers = Console.ReadLine();
@@ -33,18 +34,26 @@ namespace CSharpBeginnerCourse
                 list.Add(intNumber);
             }
 
-
-            var fIndex = list[0];
-            var lIndex = list[list.Count-1];
-            var length = list.Count;
-
-            if ((fIndex+(length-1)) == lIndex)
+            bool check = false;
+            for (int i = 0; i < list.Count-1; i++)
             {
-                Console.WriteLine("Consectuive");
+                for (int j = i+1; j < list.Count; j++)
+                {
+                    if (list[i] == list[j])
+                    {
+                        check = true;
+                        break;
+                    }
+                }
+                if (check == true)
+                {
+                    break;
+                }
             }
-            else
+
+            if (check == true)
             {
-                Console.WriteLine("Non-Consectuive");
+                Console.WriteLine("Duplicate");
             }
 
 
