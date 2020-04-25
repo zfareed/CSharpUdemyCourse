@@ -17,30 +17,29 @@ namespace CSharpBeginnerCourse
 
             // Exercises
 
-            /* Q-3 - Write a program and ask the user to enter a time value in the 24 - hour time
-                 format(e.g. 19:00). A valid time should be between 00:00 and 23:59.If the time is
-                 valid, display "Ok"; otherwise, display "Invalid Time".If the user doesn't provide
-                 any values, consider it as invalid time.*/
+            /* Q-4 - Write a program and ask the user to enter a few words separated by a space.
+                 Use the words to create a variable name with PascalCase. For example, if the
+                 user types: "number of students", display "NumberOfStudents".Make sure that the
+                 program is not dependent on the input.So, if the user types "NUMBER OF STUDENTS",
+                 the program should still display "NumberOfStudents
+                 */
 
-            Console.Write("Enetr 24 hour time format (e.g. 19:00) ");
-            var time = Console.ReadLine();
+            Console.Write("Enter some words : ");
+            var words = Console.ReadLine();
 
-            var mytime = time.Split(":");
-            var hour = Convert.ToInt32(mytime[0]);
-            var minute = Convert.ToInt32(mytime[1]);
-
-
-            if( hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
-            {
-                Console.WriteLine("Valid Time");
-            }
-            else
-            {
-                Console.WriteLine("Invalid Time");
-            }
+            //string PascalCase;
+             var wordsString = words.Split(" ");
+           
 
 
+            var PascalCase = String.Join("",wordsString);
+            Console.WriteLine(PascalCase);
 
+
+             
+
+
+            
 
 
         }
