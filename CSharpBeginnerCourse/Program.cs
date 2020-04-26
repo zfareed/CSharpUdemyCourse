@@ -6,6 +6,7 @@ using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.IO;
 
 namespace CSharpBeginnerCourse
 {
@@ -16,32 +17,33 @@ namespace CSharpBeginnerCourse
         static void Main(string[] args)
         {
 
-            // Exercises
+            // Demo. File and FileInfo
 
-            /*Q-5 - Write a program and ask the user to enter an English word.Count the number
-                of vowels(a, e, o, u, i) in the word. So, if the user enters "inadequate", the
-                program should display 6 on the console.*/
+            var path = @"c:\docs\myfile.txt";
+            File.Copy(path,@"d:\\hello\file2.txx",true);
 
-
-            Console.Write("Enter a word : ");
-            var word = Console.ReadLine();
-            int counter = 0;
-
-            foreach (var character in word)
+            if(File.Exists(path));
             {
-                if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u')
-                {
-                    counter++;
-                }
+                // perform this
             }
-            Console.WriteLine(counter);
+            File.Delete(path);
+
+            File.Move(path,@"c://ok/this");
+
+            var content = File.ReadAllText(path);
 
 
+            FileInfo myfile = new FileInfo(path);
+            myfile.Delete();
+            if(myfile.Exists)
+            {
+                // do this
+            }
 
+            myfile.CopyTo("at this path");
+            var lenght = myfile.Length;
 
-
-
-
+            
 
 
         }
