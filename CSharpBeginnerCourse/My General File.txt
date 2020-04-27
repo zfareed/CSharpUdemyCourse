@@ -329,6 +329,15 @@
 
     >> completed
 
+// 76. Exercises
+
+    >> completed
+
+
+// 77. Summary
+
+    >> completed
+
 
 
 
