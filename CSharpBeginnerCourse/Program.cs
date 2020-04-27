@@ -17,33 +17,34 @@ namespace CSharpBeginnerCourse
         static void Main(string[] args)
         {
 
-            // Demo. File and FileInfo
+            // Demo. Directory and DirectoryInfo
 
-            var path = @"c:\docs\myfile.txt";
-            File.Copy(path,@"d:\\hello\file2.txx",true);
+            Directory.CreateDirectory(@"c:/Documents/mydirectory");
 
-            if(File.Exists(path));
+            var files = Directory.GetFiles(@"C:\Users\Zain Fareed\Documents\DOC\New folder", "*.*", SearchOption.AllDirectories);
+            foreach (var file in files)
             {
-                // perform this
-            }
-            File.Delete(path);
-
-            File.Move(path,@"c://ok/this");
-
-            var content = File.ReadAllText(path);
-
-
-            FileInfo myfile = new FileInfo(path);
-            myfile.Delete();
-            if(myfile.Exists)
-            {
-                // do this
+                Console.WriteLine(file);
             }
 
-            myfile.CopyTo("at this path");
-            var lenght = myfile.Length;
+            var directories = Directory.GetDirectories(@"C:\Users\Zain Fareed\Documents\DOC", "*.*", SearchOption.AllDirectories);
+            foreach (var directory in directories)
+            {
+                Console.WriteLine(directory);
 
-            
+
+                if(Directory.Exists(@"C:\Users\Zain Fareed\Documents\DOC\New folder"))
+                {
+                    // do this
+                }
+
+                ////// Directory Info
+
+                var directoryinfo = new DirectoryInfo(@"C:\Users\Zain Fareed\Documents\DOC\New folder");
+                directoryinfo.GetFiles();
+                directoryinfo.GetDirectories();
+
+                
 
 
         }
