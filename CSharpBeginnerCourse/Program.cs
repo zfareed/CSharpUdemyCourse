@@ -17,32 +17,13 @@ namespace CSharpBeginnerCourse
         static void Main(string[] args)
         {
 
-            // Demo. Directory and DirectoryInfo
+            // Demo. Path
+            var path = @"C:\Users\Zain Fareed\Documents\DOC\Semester 6\OS\Lectures\Lecture1.pdf";
 
-            Directory.CreateDirectory(@"c:/Documents/mydirectory");
-
-            var files = Directory.GetFiles(@"C:\Users\Zain Fareed\Documents\DOC\New folder", "*.*", SearchOption.AllDirectories);
-            foreach (var file in files)
-            {
-                Console.WriteLine(file);
-            }
-
-            var directories = Directory.GetDirectories(@"C:\Users\Zain Fareed\Documents\DOC", "*.*", SearchOption.AllDirectories);
-            foreach (var directory in directories)
-            {
-                Console.WriteLine(directory);
-
-
-                if(Directory.Exists(@"C:\Users\Zain Fareed\Documents\DOC\New folder"))
-                {
-                    // do this
-                }
-
-                ////// Directory Info
-
-                var directoryinfo = new DirectoryInfo(@"C:\Users\Zain Fareed\Documents\DOC\New folder");
-                directoryinfo.GetFiles();
-                directoryinfo.GetDirectories();
+            Console.WriteLine("Extension : " + Path.GetExtension(path));
+            Console.WriteLine("File Name : " + Path.GetFileName(path));
+            Console.WriteLine("File Name without Extension : " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("Directory Name : " + Path.GetDirectoryName(path));
 
                 
 
