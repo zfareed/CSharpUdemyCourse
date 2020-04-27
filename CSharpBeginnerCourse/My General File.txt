@@ -347,6 +347,15 @@
     >> Completed
 
 
+// 79. Debugging Tools in Visual Studio
+
+    >> F9 for breakpoint
+    >> F5 for running program in debugging mode
+    >> Ctrl + F5 for running program without debugging mode
+    >> F10 for StepOver
+    >> F11 for StepInto
+
+
 
 
         
