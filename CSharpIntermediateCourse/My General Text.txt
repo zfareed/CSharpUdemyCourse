@@ -8,3 +8,14 @@
     >> Classes
     >> Interfaces
     >> OOP
+
+
+
+//////////////////////////  Section 2 (Classes) ///////////////////////////////////////////////
+
+// 7. Introduction to Classes
+
+    >> Classes
+      > contains Fields and Methods
+    >> Objects
+      > Ther are instance of a class
