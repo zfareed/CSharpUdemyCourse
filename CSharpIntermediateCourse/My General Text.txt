@@ -19,3 +19,9 @@
       > contains Fields and Methods
     >> Objects
       > Ther are instance of a class
+
+
+// 8. Constructor
+
+    >> A constructor is a method of a class that is called when an object is created.
+    >> It defines the initial state of an object

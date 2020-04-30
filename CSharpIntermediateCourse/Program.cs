@@ -3,27 +3,34 @@
 namespace CSharpIntermediateCourse
 {
 
-
-    public class Person
+    public class Customer
     {
+        public int Id;
         public string Name;
 
-        public void Age(int age)
+        public Customer(int ID)
         {
-            Console.WriteLine("Age of " + Name + " is " + age);
+            this.Id = ID;
         }
 
+        public Customer(int ID, string NAME)
+        {
+            this.Id = ID;
+            this.Name = NAME;
+        }
     }
+
+    
 
     class Program
     {
         static void Main(string[] args)
         {
 
-            var person = new Person();
-            person.Name = "Zain";
-            int age = 21;
-            person.Age(age);
+            var customer = new Customer(3, "Zain");
+            Console.WriteLine("ID : " + customer.Id);
+            Console.WriteLine("Name : " + customer.Name);
+            
 
 
 
