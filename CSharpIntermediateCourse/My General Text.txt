@@ -47,4 +47,20 @@
 // 11. Fields
 
      >> completed
+
+
+// 12. Access Modifiers
+
+     A way to control access to a class or its members
+     >> Private
+     >> Public
+     >> Protected
+     >> Internal 
+     >> Protected Internal
+
+     >> Encapsulation
+        > Define fields as private
+        > Provide getter/setter methods as public
+
+
     

@@ -3,41 +3,31 @@ using System.Collections.Generic;
 
 namespace CSharpIntermediateCourse
 {
-    public class Customer
+    public class Person
     {
-        public int id;
-        public string Name;
-        public List<Order> Orders = new List<Order>();
+        private DateTime _birthday;
 
-        public Customer(int id)
+        public void setBirthday(DateTime birthday)
         {
-            this.id = id;
+            _birthday = birthday;
         }
 
-        public Customer(int id, string name)
-            : this(id)
+        public DateTime getBirthday()
         {
-            this.Name = name;
+            return _birthday;
         }
     }
 
-    public class Order
-    {
-
-    }
-
-    
 
     class Program
     {
         static void Main(string[] args)
         {
 
-            var customer = new Customer(5);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
+            var person = new Person();
+            person.setBirthday(new DateTime(2019, 1, 1));
+            Console.WriteLine(person.getBirthday());
 
-            Console.WriteLine(customer.Orders.Count);
 
 
 
