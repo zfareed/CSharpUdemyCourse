@@ -3,25 +3,29 @@
 namespace CSharpIntermediateCourse
 {
 
-    public class Customer
+    public class Point
     {
-        public int Id;
-        public string Name;
+        public int X;
+        public int Y;
 
-        public Customer()
+        public Point(int x, int y)
         {
-            // do nothing
+            this.X = x;
+            this.Y = y;
         }
 
-        public Customer(int ID)
+
+        public void Move(int x, int y)
         {
-            this.Id = ID;
+            this.X = x;
+            this.Y = y;
         }
 
-        public Customer(int ID, string NAME)
+        public void Move(Point newLocation)
         {
-            this.Id = ID;
-            this.Name = NAME;
+            this.X = newLocation.X;
+            this.Y = newLocation.Y;
+
         }
     }
 
@@ -31,11 +35,16 @@ namespace CSharpIntermediateCourse
     {
         static void Main(string[] args)
         {
+            var point = new Point(0, 1);
+            Console.WriteLine(point.X + " " +  point.Y);
 
-            var customer = new Customer(5, "zain");
-            Console.WriteLine("ID : " + customer.Id);
-            Console.WriteLine("Name : " + customer.Name);
-            
+            point.Move(10, 20);
+            Console.WriteLine("The dot is at point ({0},{1})",point.X,point.Y);
+
+            point.Move(new Point(40,50));
+            Console.WriteLine("The dot is at point ({0},{1})",point.X,point.Y);
+
+
 
 
 
