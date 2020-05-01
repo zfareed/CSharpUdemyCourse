@@ -8,6 +8,11 @@ namespace CSharpIntermediateCourse
         public int Id;
         public string Name;
 
+        public Customer()
+        {
+            // do nothing
+        }
+
         public Customer(int ID)
         {
             this.Id = ID;
@@ -27,7 +32,7 @@ namespace CSharpIntermediateCourse
         static void Main(string[] args)
         {
 
-            var customer = new Customer(3, "Zain");
+            var customer = new Customer(5, "zain");
             Console.WriteLine("ID : " + customer.Id);
             Console.WriteLine("Name : " + customer.Name);
             
