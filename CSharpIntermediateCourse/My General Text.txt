@@ -42,4 +42,9 @@
 // 10. Methods
 
      >> completed
+
+
+// 11. Fields
+
+     >> completed
     

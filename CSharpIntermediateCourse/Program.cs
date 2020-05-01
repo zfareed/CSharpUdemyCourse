@@ -1,32 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpIntermediateCourse
 {
-
-    public class Point
+    public class Customer
     {
-        public int X;
-        public int Y;
+        public int id;
+        public string Name;
+        public List<Order> Orders = new List<Order>();
 
-        public Point(int x, int y)
+        public Customer(int id)
         {
-            this.X = x;
-            this.Y = y;
+            this.id = id;
         }
 
-
-        public void Move(int x, int y)
+        public Customer(int id, string name)
+            : this(id)
         {
-            this.X = x;
-            this.Y = y;
+            this.Name = name;
         }
+    }
 
-        public void Move(Point newLocation)
-        {
-            this.X = newLocation.X;
-            this.Y = newLocation.Y;
+    public class Order
+    {
 
-        }
     }
 
     
@@ -35,15 +32,12 @@ namespace CSharpIntermediateCourse
     {
         static void Main(string[] args)
         {
-            var point = new Point(0, 1);
-            Console.WriteLine(point.X + " " +  point.Y);
 
-            point.Move(10, 20);
-            Console.WriteLine("The dot is at point ({0},{1})",point.X,point.Y);
+            var customer = new Customer(5);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
 
-            point.Move(new Point(40,50));
-            Console.WriteLine("The dot is at point ({0},{1})",point.X,point.Y);
-
+            Console.WriteLine(customer.Orders.Count);
 
 
 
