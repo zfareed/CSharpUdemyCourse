@@ -3,18 +3,20 @@ using System.Collections.Generic;
 
 namespace CSharpIntermediateCourse
 {
+
     public class Person
     {
-        private DateTime _birthday;
+        public DateTime birthday { get; set; }
 
-        public void setBirthday(DateTime birthday)
+        public int Age
         {
-            _birthday = birthday;
-        }
+            get
+            {
+                var timeSpan = DateTime.Today - birthday;
+                var years = timeSpan.Days / 365;
 
-        public DateTime getBirthday()
-        {
-            return _birthday;
+                return years;
+            }    
         }
     }
 
@@ -25,8 +27,9 @@ namespace CSharpIntermediateCourse
         {
 
             var person = new Person();
-            person.setBirthday(new DateTime(2019, 1, 1));
-            Console.WriteLine(person.getBirthday());
+            person.birthday = new DateTime(1990, 1, 1);
+            Console.WriteLine(person.Age);
+
 
 
 
