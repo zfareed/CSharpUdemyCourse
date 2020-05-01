@@ -25,3 +25,16 @@
 
     >> A constructor is a method of a class that is called when an object is created.
     >> It defines the initial state of an object
+
+
+// 9. Object Initilizer
+
+    >> Object Initilzer is simply a syntax to initilize an object without calling one
+       of its constructors.
+
+    >> var person = new Person
+                            {
+                               firstName = "Zain";
+                               lastName = "Fareed";
+                            }
+    
