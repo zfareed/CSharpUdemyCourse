@@ -37,4 +37,9 @@
                                firstName = "Zain";
                                lastName = "Fareed";
                             }
+
+
+// 10. Methods
+
+     >> completed
     
