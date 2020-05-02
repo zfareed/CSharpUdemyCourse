@@ -73,4 +73,9 @@
     A way to access elements in the class that represents a list of values.
 
 
+// 15. Summary
+
+     >> Completed
+
+
     
