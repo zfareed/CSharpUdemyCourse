@@ -68,4 +68,9 @@
      A class member that encapsulates a getter/setter for accessing a field.
 
 
+// 14. Indexers
+
+    A way to access elements in the class that represents a list of values.
+
+
     

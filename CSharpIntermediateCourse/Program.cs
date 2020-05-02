@@ -4,36 +4,37 @@ using System.Collections.Generic;
 namespace CSharpIntermediateCourse
 {
 
-    public class Person
+    public class HttpCookie
     {
-        public DateTime birthday { get; set; }
+        private readonly Dictionary<string, string> _dictionary;
 
-        public int Age
+        public HttpCookie()
+        {
+            _dictionary = new Dictionary<string, string>();
+        }
+
+
+        public string this[string key]
         {
             get
             {
-                var timeSpan = DateTime.Today - birthday;
-                var years = timeSpan.Days / 365;
-
-                return years;
-            }    
+                return _dictionary[key];
+            }
+            set
+            {
+                _dictionary[key] = value;
+            }
         }
+            
     }
-
 
     class Program
     {
         static void Main(string[] args)
         {
-
-            var person = new Person();
-            person.birthday = new DateTime(1990, 1, 1);
-            Console.WriteLine(person.Age);
-
-
-
-
-
+            var cookie = new HttpCookie();
+            cookie["name"] = "Zain";
+            Console.WriteLine(cookie["name"]);
 
         }
     }
