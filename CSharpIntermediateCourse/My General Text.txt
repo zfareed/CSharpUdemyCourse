@@ -88,4 +88,13 @@
      >> Tight Coupling
      >> Loose Coupling
 
+
+18. Inheritance
+
+    >> A kind of relationship between two classes that allows one
+       to inherit code with other.
+    >> Benfits :
+       > code reuse
+       > polymorphic behaviour
+
     

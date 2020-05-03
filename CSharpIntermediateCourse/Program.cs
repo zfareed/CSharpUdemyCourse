@@ -1,43 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CSharpIntermediateCourse
 {
 
-    public class HttpCookie
+    public class PresentationObject           // Parent Class
     {
-        private readonly Dictionary<string, string> _dictionary;
+        public int width;
+        public string Name;
 
-        public HttpCookie()
+        public void Copy()
         {
-            _dictionary = new Dictionary<string, string>();
+            Console.WriteLine("Text Coppied");
         }
 
-
-        public string this[string key]
+        public void Duplicate()
         {
-            get
-            {
-                return _dictionary[key];
-            }
-            set
-            {
-                _dictionary[key] = value;
-            }
+            Console.WriteLine("Text Duplicated");
         }
-            
+
     }
+
+    public class Text : PresentationObject
+    {
+        public int textSize;
+        public string textColor;
+
+
+        public void HyperLink()
+        {
+            Console.WriteLine("Hyper Link Added");
+        }
+    }
+
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            var cookie = new HttpCookie();
-            cookie["name"] = "Zain";
-            Console.WriteLine(cookie["name"]);
+
+            var text = new Text();
+            text.textSize = 10;
+            text.textColor = "Brown";
+            text.Copy();
+            text.Duplicate();
+            Console.WriteLine("Text Size : " + text.textSize);
+            Console.WriteLine("Text Color : " + text.textColor);
 
         }
     }
 }
-
-
