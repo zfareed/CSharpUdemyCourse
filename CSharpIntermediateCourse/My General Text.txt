@@ -108,5 +108,9 @@
        > Flexiblity
        > A means to loose coupling
 
+
+// 20.  Favour Composition over Inheritance 
+
+       >> completed
    
     
