@@ -97,4 +97,16 @@
        > code reuse
        > polymorphic behaviour
 
+
+
+19. Composition
+
+     >> A kind of relationship between two classes that allows one
+       to inherit code with other.(same as Inheritence)
+    >> Benfits :
+       > code reuse
+       > Flexiblity
+       > A means to loose coupling
+
+   
     
