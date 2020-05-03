@@ -112,5 +112,11 @@
 // 20.  Favour Composition over Inheritance 
 
        >> completed
+
+
+// 21. Summary
+
+       >> Completed
+
    
     
