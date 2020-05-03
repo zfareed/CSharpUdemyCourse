@@ -78,4 +78,14 @@
      >> Completed
 
 
+
+///////////////////// Section 3 (Association between Classes) /////////////////////////////
+
+
+17. Class Coupling
+
+     A measure of how classes and subsystems are.
+     >> Tight Coupling
+     >> Loose Coupling
+
     
