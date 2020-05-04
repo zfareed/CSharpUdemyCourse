@@ -144,5 +144,23 @@
        >> Conversion from base class to derived class (Downcasting)
        >> use of 'as' and 'is' keywords
 
+
+// 25. Boxing and Unboxing
+
+      Types in C#
+      >> Value Types     (int, bool, string, float etc.) (use stack)
+      >> Reference Types (array, list, object) (use heap)
+
+      >> object class is the base of all classes in .NET Framework.
+
+      Boxing
+      >> The conversion of value type instance to object type reference.
+
+      Unboxing
+      >> The conversion of object type reference to value type.
+
+
+
+
    
     
