@@ -3,6 +3,29 @@ using System.Text;
 
 namespace CSharpIntermediateCourse
 {
+    public class Customer
+    {
+        public int Id;
+        public int Name;
+
+        public void Promote()
+        {
+            var rating = CalculateRating();
+            if (rating == 0)
+            {
+                System.Console.WriteLine("Promoted to Level 1");
+            }
+            else
+            {
+                System.Console.WriteLine("Promoted to level 2");
+            }
+        }
+
+        public int CalculateRating()
+        {
+            return 0;
+        }
+    }
 
 
 
@@ -10,15 +33,9 @@ namespace CSharpIntermediateCourse
     {
         static void Main(string[] args)
         {
-            var dbMigrator = new dBmigrator(new Logger());
+            var customer = new Customer();
+            customer.CalculateRating();
 
-            var logger = new Logger();
-            var installer = new Installer(logger);
-
-            dbMigrator.migrate();
-            installer.Install();
-
-           
 
         }
     }
