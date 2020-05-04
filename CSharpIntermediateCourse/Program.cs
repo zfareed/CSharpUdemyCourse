@@ -1,53 +1,33 @@
 ﻿
 namespace CSharpIntermediateCourse
 {
-    public class Shape
+    public class Parent
     {
-        public int Width;
-        public int Height;
-        public int pos_X;
-        public int pos_Y;
-
-        public void Draw()
+        public virtual void Function()
         {
-
+            System.Console.WriteLine("Hello how are you?");
         }
-
     }
 
 
-    public class Text : Shape
+    public class Child : Parent
     {
-        public int textSize;
-        public string textColor;
-
-
-
+        public override void Function()
+           
+        {
+            System.Console.WriteLine("Hello! Brother how are you");
+        }
     }
-
 
 
     class Program
     {
         static void Main(string[] args)
         {
-             var text = new Text();         //text and shape both are refering to same object in the memory
-             Shape shape = text;
-
-            text.Width = 100;
-            shape.Width = 200;
-
-
-            System.Console.WriteLine(text.Width);
-
-
-            //Downcasting
-
-            Shape myshape = new Text();
-            Text mytext = (Text)myshape;
-            
-
-
+            Parent obj = new Parent();
+            obj.Function();
+            Child obj1 = new Child();
+            obj1.Function();
 
 
         }
