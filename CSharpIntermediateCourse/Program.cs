@@ -1,40 +1,44 @@
 ﻿
 namespace CSharpIntermediateCourse
 {
-
-    public class Vehicle
+    public class Shape
     {
-        private readonly string registerationNumber;
+        public int Width;
+        public int Height;
+        public int pos_X;
+        public int pos_Y;
 
-        /*public Vehicle()
+        public void Draw()
         {
-            System.Console.WriteLine("Vehicle is being Initilazed");
-        }*/
 
-        public Vehicle(string registerationNumber)
-        {
-            this.registerationNumber = registerationNumber;
-
-            System.Console.WriteLine("Vehicle is being initilazed {0}",registerationNumber);
         }
+
     }
 
 
-    public class Car : Vehicle
+    public class Text : Shape
     {
-        public Car(string registrationNUmber)
-            : base(registrationNUmber)
-        {
-            System.Console.WriteLine("Car is being Initilzed {0}",registrationNUmber);
-        }
+        public int textSize;
+        public string textColor;
+
+
+
     }
+
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            var car = new Car("XYZ1234");
-            
+            var text = new Text();         //text and shape both are refering to same object in the memory
+            Shape shape = text;
+
+            text.Width = 100;
+            //shape.Width = 200;
+
+
+            System.Console.WriteLine(text.Width);
 
         }
     }

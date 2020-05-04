@@ -137,5 +137,12 @@
        >> Base Class Constructors always exectued first.
        >> Base Class Constructors are not inheritied.
 
+
+// 24. Upcasting and DownCasting
+
+       >> Conversion from deriverd class to base class (Upcasting)
+       >> Conversion from base class to derived class (Downcasting)
+       >> use of 'as' and 'is' keywords
+
    
     
