@@ -21,9 +21,18 @@ namespace CSharpIntermediateCourse
             }
         }
 
-        public int CalculateRating()
+        protected int CalculateRating()
         {
             return 0;
+        }
+    }
+
+    public class GoldCustomer : Customer
+    {
+        public void getVocher()
+        {
+            var rating = this.CalculateRating();
+
         }
     }
 
@@ -37,6 +46,11 @@ namespace CSharpIntermediateCourse
             customer.CalculateRating();
 
 
+
+
+            // so public is accessable everywhere
+            // private is accessable only within the class
+            // protected is accessable within the class and its derived classes
         }
     }
 }
