@@ -176,6 +176,15 @@
 
 
 
+// 29. Abstract Classes and Members
+
+       >> Abstract Modefier indicates that a class or method is missing implementation.
+       >> If a member is declared as abstract than the containing class should also
+          be declared as abstract too.
+       >> We cannot create instance of an abstract class.
+
+
+
 
 
    

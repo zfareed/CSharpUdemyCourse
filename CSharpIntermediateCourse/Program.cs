@@ -1,21 +1,17 @@
 ﻿
 namespace CSharpIntermediateCourse
 {
-    public class Parent
+    public abstract class Shape
     {
-        public virtual void Function()
-        {
-            System.Console.WriteLine("Hello how are you?");
+        public abstract void Draw();
+
         }
-    }
-
-
-    public class Child : Parent
+    public class Circle : Shape
     {
-        public override void Function()
-           
+        public override void Draw()
         {
-            System.Console.WriteLine("Hello! Brother how are you");
+            /// implementation
+            System.Console.WriteLine("Draw the circle");
         }
     }
 
@@ -24,10 +20,9 @@ namespace CSharpIntermediateCourse
     {
         static void Main(string[] args)
         {
-            Parent obj = new Parent();
-            obj.Function();
-            Child obj1 = new Child();
-            obj1.Function();
+           // var shape = new Shape();         // can't be created due to abstract class.
+            var circle = new Circle();
+            circle.Draw();
 
 
         }
