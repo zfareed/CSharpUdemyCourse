@@ -1,56 +1,31 @@
-﻿using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace CSharpIntermediateCourse
 {
-    public class Customer
+
+    public class Vehicle
     {
-        public int Id;
-        public int Name;
-
-        public void Promote()
+        public Vehicle()
         {
-            var rating = CalculateRating();
-            if (rating == 0)
-            {
-                System.Console.WriteLine("Promoted to Level 1");
-            }
-            else
-            {
-                System.Console.WriteLine("Promoted to level 2");
-            }
-        }
-
-        protected int CalculateRating()
-        {
-            return 0;
-        }
-    }
-
-    public class GoldCustomer : Customer
-    {
-        public void getVocher()
-        {
-            var rating = this.CalculateRating();
-
+            System.Console.WriteLine("Vehicle is being Initilazed");
         }
     }
 
 
+    public class Car : Vehicle
+    {
+        public Car()
+        {
+            System.Console.WriteLine("Car is being Initilzed");
+        }
+    }
 
     class Program
     {
         static void Main(string[] args)
         {
-            var customer = new Customer();
-            customer.CalculateRating();
+            var car = new Car();
+            
 
-
-
-
-            // so public is accessable everywhere
-            // private is accessable only within the class
-            // protected is accessable within the class and its derived classes
         }
     }
 }
