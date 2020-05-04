@@ -185,6 +185,14 @@
 
 
 
+// 30. Sealed Classes and Members
+
+       >> Sealed Modefiers prevent overriding of methods.
+       >> Better for runtime optimization
+
+
+
+
 
 
    
