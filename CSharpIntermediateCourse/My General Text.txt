@@ -213,6 +213,13 @@
         >> completed
 
 
+// 36. Interfaces are NOT for Multiple Inheritance
+
+        >> Interfaces have nothing to do with inheritence
+        >> Interfaces are used to build loosely coupled applications
+        >> They are not for code reusebility
+
+
 
 
 
