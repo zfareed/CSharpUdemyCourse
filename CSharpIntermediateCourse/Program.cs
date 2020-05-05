@@ -1,18 +1,25 @@
 ﻿
 namespace CSharpIntermediateCourse
 {
-    public abstract class Shape
+    public class DbMugrator
     {
-        public abstract void Draw();
+        private readonly ILogger logger;
 
-        }
-    public class Circle : Shape
-    {
-        public override void Draw()
+        public DbMugrator(ILogger logger)
         {
-            /// implementation
-            System.Console.WriteLine("Draw the circle");
+            this.logger = logger;
         }
+        public void Migrate()
+        {
+            System.Console.WriteLine("Migration Started...");
+        }
+    }
+
+
+    public interface ILogger
+    {
+        void LogError(string message);
+        void LogInfo(string message);
     }
 
 
@@ -20,9 +27,6 @@ namespace CSharpIntermediateCourse
     {
         static void Main(string[] args)
         {
-           // var shape = new Shape();         // can't be created due to abstract class.
-            var circle = new Circle();
-            circle.Draw();
 
 
         }
