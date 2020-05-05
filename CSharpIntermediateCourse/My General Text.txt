@@ -200,12 +200,6 @@
 /////////////////////// Section 6 (Interfaces)  /////////////////////////////////////
 
 
-// 33. What are Interfaces?
-
-       >> Similar to a class as syntax but have very different functionality.
-       >> Used to make loosely coupled applications.
-
-
 
 
 
