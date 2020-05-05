@@ -1,59 +1,90 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace CSharpIntermediateCourse
 {
-    public class IConsoleLogger : ILogger
+    
+    public class Mail
     {
-         public void LogError(string message)
+    }
+
+    public class MailNotificationChannel : INotificationChannel
+    {
+        public void Send(Message message)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(message);
-        }
-
-        public void LogInfo(string message)
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine(message);
-
-
+            Console.WriteLine("Sending mail...");
         }
     }
 
-    public class DbMigrator
+    public interface INotificationChannel
     {
-        private readonly ILogger logger;
+    }
 
-        public DbMigrator(ILogger logger)
+    public class MailService
+    {
+        public void Send(Mail mail)
         {
-            this.logger = logger;
-        }
-        public void Migrate()
-        {
-
-            logger.LogInfo("Migration starts at" + DateTime.Now);
-
-
-            logger.LogInfo("Migration ends at " + DateTime.Now);
-
-
+            Console.WriteLine("Sending email...");
         }
     }
 
 
-    public interface ILogger
+    public class Message
     {
-        void LogError(string message);
-        void LogInfo(string message);
     }
+
+
+    public class SmsNotificationChannel : INotificationChannel
+    {
+        public void Send(Message message)
+        {
+            Console.WriteLine("Sending SMS...");
+        }
+    }
+
+
+    public class Video
+    {
+    }
+
+
+    public class VideoEncoder
+    {
+        private readonly IList<INotificationChannel> _notificationChannels;
+
+        public VideoEncoder()
+        {
+            _notificationChannels = new List<INotificationChannel>();
+        }
+
+        public void Encode(Video video)
+        {
+            // Video encoding logic     
+            // ...
+
+            foreach (var channel in _notificationChannels)
+                channel.Send(new Message());
+        }
+
+        public void RegisterNotificationChannel(INotificationChannel channel)
+        {
+            _notificationChannels.Add(channel);
+        }
+    }
+
+
 
 
     class Program
     {
         static void Main(string[] args)
         {
-            var dbmigrator = new DbMigrator(new IConsoleLogger());
-            dbmigrator.Migrate();
+
+            var encoder = new VideoEncoder();
+            encoder.RegisterNotificationChannel(new MailNotificationChannel());
+            encoder.RegisterNotificationChannel(new SmsNotificationChannel());
+            encoder.Encode(new Video());
 
         }
     }
