@@ -8,11 +8,14 @@ namespace CSharpIntermediateCourse
          public void LogError(string message)
         {
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(message);
         }
 
         public void LogInfo(string message)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(message);
+
 
         }
     }
@@ -28,10 +31,10 @@ namespace CSharpIntermediateCourse
         public void Migrate()
         {
 
-            logger.LogInfo("Migration starts at {0}" + DateTime.Now);
+            logger.LogInfo("Migration starts at" + DateTime.Now);
 
 
-            logger.LogInfo("Migration ends at {0}" + DateTime.Now);
+            logger.LogInfo("Migration ends at " + DateTime.Now);
 
 
         }
