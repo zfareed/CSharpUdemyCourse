@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpBeginnerCourse", "CSharpBeginnerCourse\CSharpBeginnerCourse.csproj", "{43799D83-ACF6-4DFE-AD1B-BAAE5CE15DF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpIntermediateCourse", "CSharpIntermediateCourse\CSharpIntermediateCourse.csproj", "{3B853FE1-99FF-4253-98B0-AEC940D15C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpIntermediateCourse", "CSharpIntermediateCourse\CSharpIntermediateCourse.csproj", "{3B853FE1-99FF-4253-98B0-AEC940D15C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAdvanceCourse", "CSharpAdvanceCourse\CSharpAdvanceCourse.csproj", "{0056A529-C586-403C-AC06-438DBD693402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3B853FE1-99FF-4253-98B0-AEC940D15C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B853FE1-99FF-4253-98B0-AEC940D15C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B853FE1-99FF-4253-98B0-AEC940D15C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0056A529-C586-403C-AC06-438DBD693402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0056A529-C586-403C-AC06-438DBD693402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0056A529-C586-403C-AC06-438DBD693402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0056A529-C586-403C-AC06-438DBD693402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
