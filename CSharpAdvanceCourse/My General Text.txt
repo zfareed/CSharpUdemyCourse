@@ -3,3 +3,11 @@
 // 1,2,3,4,5
 
     >> completed
+
+
+// 7. Delegates
+
+    >> A delegate is an object who knows how to call a method(or group of methods).
+    >> A reference to a function.
+
+    >> It needs for designing extensibe and flexible applications

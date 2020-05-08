@@ -2,73 +2,38 @@
 
 namespace CSharpAdvanceCourse
 {
-    public class List
+    public class PhotoFilters
     {
-        public void Add(int number)
+        public void ApplyBrightness(Photo photo)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Apply brightness");
         }
 
-        public int this[int index]
+        public void ApplyContrast(Photo photo)
         {
-            get { throw new NotImplementedException(); }
+            Console.WriteLine("Apply contrast");
         }
 
-    }
-    public class BooKList
-    {
-            public void Add(Book book)
-            {
-                throw new NotImplementedException();
-            }
-
-            public Book this[int index]
-            {
-                get { throw new NotImplementedException(); }
-            }
+        public void Resize(Photo photo)
+        {
+            Console.WriteLine("Resize photo");
+        }
     }
 
-    public class Book
-        {
-            /// mybook
-        }
-
-
-    public class GenericList<T>
+    public class Photo
     {
-        public void Add(T number)
-        {
-            throw new NotImplementedException();
-        }
-
-        public T this[int index]
-        {
-            get { throw new NotImplementedException(); }
-        }
     }
-            
-
-
-
-
 
     class Program
     {
         static void Main(string[] args)
         {
+            var photo = new PhotoFilters();
+            photo.ApplyBrightness(new Photo());
+            photo.ApplyBrightness(new Photo());
+            photo.Resize(new Photo());
 
-            /*var list = new List();
-            list.Add(10);
 
-
-            var books = new BooKList();
-            books.Add(new Book());*/
-
-            var numbers = new GenericList<int>();
-            numbers.Add(10);
-
-            var books = new GenericList<Book>();
-            books.Add(new Book());
 
 
             
