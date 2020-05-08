@@ -11,3 +11,13 @@
     >> A reference to a function.
 
     >> It needs for designing extensibe and flexible applications
+
+
+//8. Lamda Expression
+
+    >> An anonymous method
+       > no access modefier
+       > no name 
+       > return statement
+
+    >> We use it for convenince (writing less code to get the same result)
