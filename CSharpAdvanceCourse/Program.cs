@@ -1,24 +1,42 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpAdvanceCourse
 {
+    public class BookRepository
+    {
+        public List<Book> GetBooks()
+        {
+            return new List<Book>
+            {
+                new Book() {Title = "Title 1", Price = 5},
+                new Book() {Title = "Title 2", Price = 7},
+                new Book() {Title = "Title 3", Price = 17}
+            };
+        }
+    }
+
+    public class Book
+    {
+        public string Isbn { get; set; }
+        public string Title { get; set; }
+        public float Price { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            // args => expression
+            var books = new BookRepository().GetBooks();
 
-            Func<int, int> square = number => number * number;
+            var cheapBooks = books.FindAll(b => b.Price < 10);
 
-            Console.WriteLine(square(5));
-
-
+            foreach (var book in cheapBooks)
+            {
+                Console.WriteLine(book.Title);
+            }
         }
 
-        static int Square(int number)
-        {
-            return number * number;
-        }
         
     }
 }
