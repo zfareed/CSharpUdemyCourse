@@ -22,7 +22,7 @@ namespace CSharpAdvanceCourse
                 throw new NotImplementedException();
             }
 
-            public int this[int index]
+            public Book this[int index]
             {
                 get { throw new NotImplementedException(); }
             }
@@ -32,6 +32,20 @@ namespace CSharpAdvanceCourse
         {
             /// mybook
         }
+
+
+    public class GenericList<T>
+    {
+        public void Add(T number)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T this[int index]
+        {
+            get { throw new NotImplementedException(); }
+        }
+    }
             
 
 
@@ -43,11 +57,17 @@ namespace CSharpAdvanceCourse
         static void Main(string[] args)
         {
 
-            var list = new List();
+            /*var list = new List();
             list.Add(10);
 
 
             var books = new BooKList();
+            books.Add(new Book());*/
+
+            var numbers = new GenericList<int>();
+            numbers.Add(10);
+
+            var books = new GenericList<Book>();
             books.Add(new Book());
 
 
