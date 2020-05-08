@@ -21,3 +21,10 @@
        > return statement
 
     >> We use it for convenince (writing less code to get the same result)
+
+
+//9. Events
+  
+     >> A mechanism for communction between objects.
+     >> Used for making loosely coupled applications.
+     >> Help extending applications.
