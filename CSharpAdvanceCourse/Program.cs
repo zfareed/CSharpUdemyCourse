@@ -34,18 +34,24 @@ namespace CSharpAdvanceCourse
         {
             var books = new BookRepository().GetBooks();
 
-            var cheapbooks = new List<Book>();
+            // LINQ Query Opreators
+            var cheaperbooks = from b in books
+                               where b.Price < 10
+                               orderby b.Title
+                               select b.Title;
 
-            foreach (var book in books)
-            {
-                if (book.Price < 10)
-                {
-                    cheapbooks.Add(book);
-                }
-            }
+
+              // these are LINQ Extension Methods
+            var cheapbooks = books
+                .Where(b => b.Price < 10)
+                .OrderBy(b => b.Title)
+                .Select(b => b.Title);
+
+            
                 foreach (var book in books)
                 {
-                    Console.WriteLine(book.Title + " " + book.Price);
+                Console.WriteLine(book);
+                    //Console.WriteLine(book.Title + " " + book.Price);
                 }
             
         }
