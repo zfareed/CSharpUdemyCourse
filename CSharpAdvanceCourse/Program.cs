@@ -6,72 +6,52 @@ using System.Threading;
 namespace CSharpAdvanceCourse
 {
 
-    public class Video
+    public class Book
     {
         public string Title { get; set; }
+        public float Price { get; set; }
     }
 
-
-    public class VideoEncoder
+    public class BookRepository
     {
-        public delegate void VideoEncoderEventHandler(object source, EventArgs argd);
-        public event VideoEncoderEventHandler VideoEncoded;
-
-
-        public void Encode(Video video)
+        public IEnumerable<Book> GetBooks()
         {
-            Console.WriteLine("Encoding video...");
-            Thread.Sleep(3000);
-        }
-
-        protected virtual void OnVideoEncoded()
-        {
-            if (VideoEncoded != null)
+            return new List<Book>
             {
-                VideoEncoded(this, EventArgs.Empty);
-            }
+                new Book() {Title = "ADO.Net Step by Step", Price = 5 },
+                new Book() {Title = "ASP.NET MVC", Price = 9.99f },
+                new Book() {Title = "ASP.NET Web API", Price = 12 },
+                new Book() {Title = "C# Advanced Topics", Price = 7 },
+                new Book() {Title = "C# Advanced Topics", Price = 9 }
+            };
         }
     }
-
-
 
 
     class Program
     {
         static void Main(string[] args)
         {
-            string post = "This is supposed to be a very long blog post blah blah blah...";
-            var shortenedPost = post.Shorten(5);
+            var books = new BookRepository().GetBooks();
 
-            IEnumerable<int> numbers = new List<int>() { 1, 5, 3, 10, 2, 18 };
-            var max = numbers.Max();
+            var cheapbooks = new List<Book>();
 
-            Console.WriteLine(max);
-
-        }
-
-
-        
-    }
-
-
-    public static class StringExtensions
-    {
-        public static string Shorten(this String str, int numberOfWords)
-        {
-            if (numberOfWords < 0)
-                throw new ArgumentOutOfRangeException("numberOfWords should be greater than or equal to 0.");
-
-            if (numberOfWords == 0)
-                return "";
-
-            var words = str.Split(' ');
-
-            if (words.Length <= numberOfWords)
-                return str;
-
-            return string.Join(" ", words.Take(numberOfWords)) + "...";
+            foreach (var book in books)
+            {
+                if (book.Price < 10)
+                {
+                    cheapbooks.Add(book);
+                }
+            }
+                foreach (var book in books)
+                {
+                    Console.WriteLine(book.Title + " " + book.Price);
+                }
+            
         }
     }
+    
+
 }
+
 
