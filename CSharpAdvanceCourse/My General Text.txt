@@ -28,3 +28,9 @@
      >> A mechanism for communction between objects.
      >> Used for making loosely coupled applications.
      >> Help extending applications.
+
+
+//10. Extension Methods
+
+     >> It allows us to add methods to existing class without changing its source code
+     >> or creating a new class that inherits to it.

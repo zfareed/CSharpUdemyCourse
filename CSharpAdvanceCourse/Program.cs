@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace CSharpAdvanceCourse
@@ -39,27 +40,38 @@ namespace CSharpAdvanceCourse
     {
         static void Main(string[] args)
         {
-            var video = new Video() { Title = "video 1" };
-            var videoencoder = new VideoEncoder();//publisher
-            var mailService = new MailService();//subscriber
+            string post = "This is supposed to be a very long blog post blah blah blah...";
+            var shortenedPost = post.Shorten(5);
 
-            videoencoder.VideoEncoded += mailService.OnVideoEncoded;
+            IEnumerable<int> numbers = new List<int>() { 1, 5, 3, 10, 2, 18 };
+            var max = numbers.Max();
 
-            videoencoder.Encode(video);
-
-
+            Console.WriteLine(max);
 
         }
 
-        public class MailService
-        {
-            public void OnVideoEncoded(object source, EventArgs agrs)
-            {
-                Console.WriteLine("Mail Sevice Sending...");
-            }
-        }
 
         
+    }
+
+
+    public static class StringExtensions
+    {
+        public static string Shorten(this String str, int numberOfWords)
+        {
+            if (numberOfWords < 0)
+                throw new ArgumentOutOfRangeException("numberOfWords should be greater than or equal to 0.");
+
+            if (numberOfWords == 0)
+                return "";
+
+            var words = str.Split(' ');
+
+            if (words.Length <= numberOfWords)
+                return str;
+
+            return string.Join(" ", words.Take(numberOfWords)) + "...";
+        }
     }
 }
 
