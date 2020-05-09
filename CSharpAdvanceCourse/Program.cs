@@ -35,25 +35,21 @@ namespace CSharpAdvanceCourse
             var books = new BookRepository().GetBooks();
 
             // LINQ Query Opreators
-            var cheaperbooks = from b in books
-                               where b.Price < 10
-                               orderby b.Title
-                               select b.Title;
+            var book = books.Single(b => b.Title == "ASP.NET MVC");
+            var book1 = books.SingleOrDefault(b => b.Title == "ASP.NET MVC 2");
+            var book2 = books.First(b => b.Title == "C# Advanced Topics");
+
+            Console.WriteLine(book.Title);
+            Console.WriteLine(book1 == null);
+            Console.WriteLine(book2.Title +" " + book2.Price);
 
 
-              // these are LINQ Extension Methods
-            var cheapbooks = books
-                .Where(b => b.Price < 10)
-                .OrderBy(b => b.Title)
-                .Select(b => b.Title);
+            var pagedBooks = books.Skip(2).Take(3);
 
-            
-                foreach (var book in books)
-                {
-                Console.WriteLine(book);
-                    //Console.WriteLine(book.Title + " " + book.Price);
-                }
-            
+            foreach (var pagebook in pagedBooks)
+            {
+                Console.WriteLine(pagebook.Title);
+            }
         }
     }
     
