@@ -54,3 +54,29 @@
 
 
 //14. Exception Handling
+
+       >> completed
+
+
+//15. Asynchronous Programming with Async/Await
+
+       >> In Synchronous programming when a function is called the the program
+          waits until the function returns to go to next line.
+
+       >> In Asynchronous programming when a function is called, program execution
+          continues ti the next line, without waiting for the function to complete.
+
+       >> Real World Example : Windows Media Player, Web Browser
+
+       >> WHEN we use ASynchronous Programming ?
+            When:
+                Accessing the Web
+                Working with the files and databases
+                Working with images
+            HOW ??
+            1. Traditional Approaches:
+                Multi-threading
+                Callbacks.
+            2. New approach since .NET 4.5
+                Async/ Await (Key Words)
+
