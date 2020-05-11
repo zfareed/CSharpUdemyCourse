@@ -45,3 +45,9 @@
 //12. Nullable Types
 
      >> completed
+
+
+//13. Dynamic
+
+     >> C# 4.0 (.NET 4.5) introduced a new type that avoids compile time type checking.
+        It checks the type at runtime.

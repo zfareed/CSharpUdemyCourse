@@ -10,20 +10,17 @@ namespace CSharpAdvanceCourse
     {
         static void Main(string[] args)
         {
+            dynamic number = 10;
 
-            DateTime? date = null;
+            Console.WriteLine(number.GetType());
 
-            Console.WriteLine("Get value or default :" + date.GetValueOrDefault());
-            Console.WriteLine("Has Value :" + date.HasValue);
-            Console.WriteLine("Value " + date.Value);   //program crash becasue it doesnot have value
+            int i = 5;
+            dynamic d = i;
+            long l = d;
 
-            DateTime date2 = date.GetValueOrDefault();
+            Console.WriteLine(l);
 
-            Console.WriteLine(date2);
 
-            DateTime date3 = date2;
-
-            Console.WriteLine(date3);
         }
     }
     
