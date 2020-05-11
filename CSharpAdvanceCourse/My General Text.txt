@@ -41,3 +41,7 @@
      >> Language Integrated Query
      >> Giving you the capability of query objects
 
+
+//12. Nullable Types
+
+     >> completed
